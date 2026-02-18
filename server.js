@@ -15,11 +15,11 @@ app.post("/pay", async (req, res) => {
       {
         phone: phone,
         amount: amount,
-        channel_id: process.env.SWIFT_WALLET_CHANNEL_ID
+        channel_id: process.env.SWIFT_ID
       },
       {
         headers: {
-          Authorization: `Bearer ${process.env.SWIFT_WALLET_API_KEY}`,
+          Authorization: `Bearer ${process.env.SWIFT_API}`,
           "Content-Type": "application/json"
         }
       }
